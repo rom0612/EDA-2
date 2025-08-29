@@ -1,24 +1,14 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include "utilerias.h"
-#include "ordenamientos.h"
+#include "utilerias.c"
+#include "ordenamientos.c"
 
-#define SIZE 20
-#define MAX 1000
-
-void generarArregloAleatorio(int arreglo[], int n) {
-    for(int i = 0; i < n; i++) {
-        arreglo[i] = rand() % MAX;
-    }
-}
+#define SIZE 10
 
 int main() {
-    int arr[SIZE];
     int opcion;
-    srand(time(NULL));
     
     do {
+        int copia [] = {55,23,11,60,75,4,18,90,50,35};
         printf("\n=== MENU DE ORDENAMIENTO ===\n");
         printf("1. Insertion Sort\n");
         printf("2. Selection Sort\n");
@@ -28,42 +18,38 @@ int main() {
         printf("Seleccione una opcion: ");
         scanf("%d", &opcion);
         
-        if(opcion >= 1 && opcion <= 4) {
-            generarArregloAleatorio(arr, SIZE);
-            printf("\nArreglo original: ");
-            printArray(arr, SIZE);
-            
-            int copia[SIZE];
-            for(int i = 0; i < SIZE; i++) copia[i] = arr[i];
-            
             switch(opcion) {
                 case 1:
                     printf("\n=== INSERTION SORT ===\n");
                     insertionSort(copia, SIZE);
+                    printf("\nArreglo ordenado: ");
+                    printArray(copia, SIZE);
                     break;
                 case 2:
                     printf("\n=== SELECTION SORT ===\n");
                     selectionSort(copia, SIZE);
+                    printf("\nArreglo ordenado: ");
+                    printArray(copia, SIZE);
                     break;
                 case 3:
                     printf("\n=== BUBBLE SORT ===\n");
                     bubbleSort(copia, SIZE);
+                    printf("\nArreglo ordenado: ");
+                    printArray(copia, SIZE);
                     break;
                 case 4:
                     printf("\n=== BUBBLE SORT MEJORADO ===\n");
                     bubbleSortMejorado(copia, SIZE);
+                    printf("\nArreglo ordenado: ");
+                    printArray(copia, SIZE);
                     break;
+                case 5:
+                    printf("Saliendo del programa...");
+                    break;
+                default:
+                    printf("Opción no válida.");
             }
             
-            printf("\nArreglo ordenado: ");
-            printArray(copia, SIZE);
-        }
-        else if(opcion == 5) {
-            printf("\n¡Gracias por usar el programa! Saliendo...\n");
-        }
-        else {
-            printf("\nOpción inválida. Intente de nuevo.\n");
-        }
         
     } while(opcion != 5);
     

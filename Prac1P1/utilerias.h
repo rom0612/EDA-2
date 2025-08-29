@@ -1,6 +1,6 @@
-#ifndef UTILERIAS_H
-#define UTILERIAS_H
-
+#ifndef _UTILERIAS
+#define _UTILERIAS
+#include <stdio.h>
 void swap(int *a, int *b);
 void printArray(int lista[], int n);
 
