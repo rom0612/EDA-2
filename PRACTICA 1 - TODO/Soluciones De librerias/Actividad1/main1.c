@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "utilerias.c"
-#include "ordenamientos.c"
+#include "utilerias.h"
+#include "ordenamientos.h"
 
 int main() {
     int arrSelection[] = {30, 20, 70, 8, 42, 65, 5, 10, 77, 1};
