@@ -19,7 +19,7 @@ public class Principal {
         //BUBBLE
         Burbuja.bubbleSort(arr3);
         
-        //Imprimir desp de ordenar
+        //Imprimir desp. de ordenar
         System.out.println("\nArreglos ordenados");  
         System.out.print("Inserción: ");
         Utilerias.imprimirArreglo(arr1);
