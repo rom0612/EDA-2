@@ -6,4 +6,3 @@ void InsertionSort(int lista[], int n);
 void BubbleSort(int lista[], int n);
 
 #endif
-

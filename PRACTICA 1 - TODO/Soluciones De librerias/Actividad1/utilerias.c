@@ -12,3 +12,4 @@ void PrintArray(int lista[], int n) {
         printf("%d ", lista[i]);
     }
 }
+

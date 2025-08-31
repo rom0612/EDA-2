@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "utilerias.h"
 
 void swap(int *a, int *b) {

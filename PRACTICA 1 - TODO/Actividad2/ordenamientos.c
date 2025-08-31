@@ -35,19 +35,13 @@ void InsertionSort(int lista[], int n) {
 
 void BubbleSort(int lista[], int n) {
     for (int i = 0; i < n - 1; i++) {
-        int swapped = 0; //NUEVA VARIABLE
         for (int j = 0; j < n - i - 1; j++) {
             if (lista[j] > lista[j + 1]) {
                 swap(&lista[j], &lista[j + 1]);
-                swapped = 1; //SI DE HIZO UN CAMBIO, EL VALOR DE SWAPPED CAMBIA
             }
         }
         
         printf("\n -- Iteracion numero %d: ", i + 1);
         PrintArray(lista, n);
-        if (swapped == 0) { //SI NO SEHIZO NINGUN CAMBIO D POSICIÓN YA ESTÁ ORDENADO
-            printf("\nla lista ya está ordenada, después de la iteración %d: ", i + 1);
-            break;
-        }
     }
 }
