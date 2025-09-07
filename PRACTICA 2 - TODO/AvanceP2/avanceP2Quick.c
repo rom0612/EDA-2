@@ -69,7 +69,7 @@ int partition (int arr[], int low, int high){
     printf("Pivote en posicion final: %d\n", i + 1); // mUESTRA LO QUE TAMBIÉN DEVUELVE EL RETURN
     printf("----\n\n");
     
-    return (i + 1); //
+    return (i + 1); 
 }
 
 void quickSort(int arr[], int low, int high){
