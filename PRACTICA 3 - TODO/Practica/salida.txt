@@ -1,0 +1,158 @@
+Arreglo original:
+64 34 25 12 22 11 90 88 76 50 42 33 15 99 67 45 81 3 78 55 
+Tamaño del arreglo: 20
+----------------------------
+ITERACIÓN 1
+   sublista actual: 64 34 25 12 22 11 90 88 76 50 42 33 15 99 67 45 81 3 78 
+---
+ITERACIÓN 2
+   sublista actual: 64 34 25 12 22 11 90 88 76 
+---
+ITERACIÓN 3
+   sublista actual: 64 34 25 12 
+---
+ITERACIÓN 4
+   sublista actual: 64 34 
+---
+ITERACIÓN 5
+   sublista actual: 64 
+---
+L: 64 
+R: 34 
+iteración 5 terminada
+   después del merge: 34 
+---
+L: 34 64 
+R: 25 
+iteración 5 terminada
+   después del merge: 25 34 
+---
+ITERACIÓN 6
+   sublista actual: 12 
+---
+L: 12 
+R: 22 
+iteración 6 terminada
+   después del merge: 12 
+---
+L: 25 34 64 
+R: 12 22 
+iteración 6 terminada
+   después del merge: 12 22 25 34 
+---
+ITERACIÓN 7
+   sublista actual: 11 90 88 76 
+---
+ITERACIÓN 8
+   sublista actual: 11 90 
+---
+ITERACIÓN 9
+   sublista actual: 11 
+---
+L: 11 
+R: 90 
+iteración 9 terminada
+   después del merge: 11 
+---
+L: 11 90 
+R: 88 
+iteración 9 terminada
+   después del merge: 11 88 
+---
+ITERACIÓN 10
+   sublista actual: 76 
+---
+L: 76 
+R: 50 
+iteración 10 terminada
+   después del merge: 50 
+---
+L: 11 88 90 
+R: 50 76 
+iteración 10 terminada
+   después del merge: 11 50 76 88 
+---
+L: 12 22 25 34 64 
+R: 11 50 76 88 90 
+iteración 10 terminada
+   después del merge: 11 12 22 25 34 50 64 76 88 
+---
+ITERACIÓN 11
+   sublista actual: 42 33 15 99 67 45 81 3 78 
+---
+ITERACIÓN 12
+   sublista actual: 42 33 15 99 
+---
+ITERACIÓN 13
+   sublista actual: 42 33 
+---
+ITERACIÓN 14
+   sublista actual: 42 
+---
+L: 42 
+R: 33 
+iteración 14 terminada
+   después del merge: 33 
+---
+L: 33 42 
+R: 15 
+iteración 14 terminada
+   después del merge: 15 33 
+---
+ITERACIÓN 15
+   sublista actual: 99 
+---
+L: 99 
+R: 67 
+iteración 15 terminada
+   después del merge: 67 
+---
+L: 15 33 42 
+R: 67 99 
+iteración 15 terminada
+   después del merge: 15 33 42 67 
+---
+ITERACIÓN 16
+   sublista actual: 45 81 3 78 
+---
+ITERACIÓN 17
+   sublista actual: 45 81 
+---
+ITERACIÓN 18
+   sublista actual: 45 
+---
+L: 45 
+R: 81 
+iteración 18 terminada
+   después del merge: 45 
+---
+L: 45 81 
+R: 3 
+iteración 18 terminada
+   después del merge: 3 45 
+---
+ITERACIÓN 19
+   sublista actual: 78 
+---
+L: 78 
+R: 55 
+iteración 19 terminada
+   después del merge: 55 
+---
+L: 3 45 81 
+R: 55 78 
+iteración 19 terminada
+   después del merge: 3 45 55 78 
+---
+L: 15 33 42 67 99 
+R: 3 45 55 78 81 
+iteración 19 terminada
+   después del merge: 3 15 33 42 45 55 67 78 81 
+---
+L: 11 12 22 25 34 50 64 76 88 90 
+R: 3 15 33 42 45 55 67 78 81 99 
+iteración 19 terminada
+   después del merge: 3 11 12 15 22 25 33 34 42 45 50 55 64 67 76 78 81 88 90 
+---
+Arreglo ordenado:
+3 11 12 15 22 25 33 34 42 45 50 55 64 67 76 78 81 88 90 99 

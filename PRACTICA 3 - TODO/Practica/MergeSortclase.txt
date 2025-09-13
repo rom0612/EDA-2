@@ -1,0 +1,33 @@
+void mergeSort(int list[], int first, int last) {
+    int mid;
+    if (first < last) {
+        mid = (first + last) / 2;
+        mergeSort(list, first, mid);
+        mergeSort(list, mid + 1, last);
+        merge(list, first, mid, last);
+    }
+}
+
+void merge(int list[], int first, int mid, int last) {
+    int list2[last - first + 1];
+    int i, j, k;
+    k = 0;
+    i = first;
+    j = mid + 1;
+
+    while (i <= mid && j <= last) {
+        if (list[i] < list[j])
+            list2[k++] = list[i++];
+        else
+            list2[k++] = list[j++];
+    }
+    while (i <= mid)
+        list2[k++] = list[i++];
+
+    while (j <= last)
+        list2[k++] = list[j++];
+
+    for (i = last; i >= first; i--) 
+        list[i] = list2[--k];
+}
+
