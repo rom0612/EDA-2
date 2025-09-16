@@ -16,11 +16,11 @@ int partition (int arr[], int low, int high, int *operaciones){
        	if (arr[j] <= pivot){
             i++;    
             swap(&arr[i], &arr[j]);
-            (*operaciones) += 3;
+            (*operaciones) ++;
         	}
     	}
     	swap(&arr[i + 1], &arr[high]);
-        (*operaciones) += 3;
+        (*operaciones) ++;
 	return (i + 1);
 }
 

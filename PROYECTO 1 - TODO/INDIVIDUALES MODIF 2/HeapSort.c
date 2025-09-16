@@ -12,7 +12,7 @@ void Heapify(int* A, int i, int size, int* heapSize, int* operaciones) {
     int l = 2 * i + 1;
     int r = 2 * i + 2;
     int largest;
-    (*operaciones) ++; // 3 asignaciones
+    (*operaciones) += 3; // 3 asignaciones
 
     (*operaciones)++; // Comparación
     if(l <= *heapSize) {
@@ -41,7 +41,7 @@ void Heapify(int* A, int i, int size, int* heapSize, int* operaciones) {
     (*operaciones)++; // Comparación
     if(largest != i) {
         swap(&A[i], &A[largest]);
-        (*operaciones) ++; // 3 asignaciones en swap
+        (*operaciones) += 3; // 3 asignaciones en swap
         Heapify(A, largest, size, heapSize, operaciones);
     }
 }
@@ -63,7 +63,7 @@ void HeapSort(int* A, int size, int* operaciones) {
     for(int i = size - 1; i > 0; i--) {
         (*operaciones)++; // Comparación del for
         swap(&A[0], &A[i]);
-        (*operaciones) ++; // 3 asignaciones en swap
+        (*operaciones) += 3; // 3 asignaciones en swap
         heapSize--;
         (*operaciones)++; // Asignación
         Heapify(A, 0, size, &heapSize, operaciones);

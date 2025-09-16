@@ -25,7 +25,7 @@ void selectionSort(int arreglo[], int n, int *operaciones) {
         (*operaciones)++; // Comparación
         if(i != indiceMenor) {
             swap(&arreglo[i], &arreglo[indiceMenor]);
-            (*operaciones) ++; // 3 asignaciones en swap
+            (*operaciones) += 3; // 3 asignaciones en swap
         }
     }
 }

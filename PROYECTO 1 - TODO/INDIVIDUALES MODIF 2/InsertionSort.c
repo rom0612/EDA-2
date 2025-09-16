@@ -2,31 +2,29 @@
 #include <stdio.h>
 #include <time.h>
 
-void swap(int *a,int *b){
-    int temp=*a;
-    *a=*b;
-    *b=temp;
-}
 
-void selectionSort(int arreglo[], int n, int *operaciones) {
-    int indiceMenor, i, j;
-    for(i = 0; i < n - 1; i++) {
-        (*operaciones)++; // Comparación del for externo
-        indiceMenor = i;
+void InsertionSort(int lista[], int n, int *operaciones) {
+    for (int i = 1; i < n; i++) {
+        (*operaciones)++; // Comparación del for
+        int index = lista[i];
         (*operaciones)++; // Asignación
-        for(j = i + 1; j < n; j++) {
-            (*operaciones)++; // Comparación del for interno
-            (*operaciones)++; // Comparación
-            if(arreglo[j] < arreglo[indiceMenor]) {
-                indiceMenor = j;
+        int j = i - 1;
+        (*operaciones)++; // Asignación
+        
+        while (j >= 0) {
+            (*operaciones)++; // Comparación del while
+            (*operaciones)++; // Comparación interna
+            if (lista[j] > index) {
+                lista[j + 1] = lista[j];
                 (*operaciones)++; // Asignación
+                j = j - 1;
+                (*operaciones)++; // Asignación
+            } else {
+                break;
             }
         }
-        (*operaciones)++; // Comparación
-        if(i != indiceMenor) {
-            swap(&arreglo[i], &arreglo[indiceMenor]);
-            (*operaciones) ++; // 3 asignaciones en swap
-        }
+        lista[j + 1] = index;
+        (*operaciones)++; // Asignación
     }
 }
 
@@ -76,35 +74,35 @@ int main() {
     int n8 = sizeof(arr8) / sizeof(arr8[0]);
     
     operaciones = 0;
-    selectionSort(arr1, n1, &operaciones);
+    InsertionSort(arr1, n1, &operaciones);
     printf("Total de operaciones con arreglo de 50: %d\n", operaciones);
     
     operaciones = 0;
-    selectionSort(arr2, n2, &operaciones);
+    InsertionSort(arr2, n2, &operaciones);
     printf("Total de operaciones con arreglo de 100: %d\n", operaciones);
     
     operaciones = 0;
-    selectionSort(arr3, n3, &operaciones);
+    InsertionSort(arr3, n3, &operaciones);
     printf("Total de operaciones con arreglo de 500: %d\n", operaciones);
     
     operaciones = 0;
-    selectionSort(arr4, n4, &operaciones);
+    InsertionSort(arr4, n4, &operaciones);
     printf("Total de operaciones con arreglo de 800: %d\n", operaciones);
     
     operaciones = 0;
-    selectionSort(arr5, n5, &operaciones);
+    InsertionSort(arr5, n5, &operaciones);
     printf("Total de operaciones con arreglo de 1000: %d\n", operaciones);
     
     operaciones = 0;
-    selectionSort(arr6, n6, &operaciones);
+    InsertionSort(arr6, n6, &operaciones);
     printf("Total de operaciones con arreglo de 2000: %d\n", operaciones);
     
     operaciones = 0;
-    selectionSort(arr7, n7, &operaciones);
+    InsertionSort(arr7, n7, &operaciones);
     printf("Total de operaciones con arreglo de 5000: %d\n", operaciones);
     
     operaciones = 0;
-    selectionSort(arr8, n8, &operaciones);
+    InsertionSort(arr8, n8, &operaciones);
     printf("Total de operaciones con arreglo de 10000: %d\n", operaciones);
 
     return 0;

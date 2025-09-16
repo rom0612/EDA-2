@@ -17,7 +17,7 @@ void bubbleSort(int arreglo[],int tama, int *operaciones){
 			(*operaciones)++;
 			if (arreglo[j]>arreglo[j+1]){
 				swap(&arreglo[j],&arreglo[j+1]);
-                (*operaciones) ++;
+                (*operaciones) += 3;
 				intercambio=1;
 			}
 		//printArray(arreglo,tama);

@@ -23,7 +23,7 @@ void merge(int arreglo[], int left, int mid, int right, int* operaciones) {
     }
 
     int i = 0, j = 0, k = left;
-    (*operaciones) ++; // 3 asignaciones
+    (*operaciones) += 3; // 3 asignaciones
 
     while (i < n1 && j < n2) {
         (*operaciones) += 2; // 2 comparaciones del while
