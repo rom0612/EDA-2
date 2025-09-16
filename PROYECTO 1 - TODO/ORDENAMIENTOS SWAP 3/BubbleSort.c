@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <time.h>
 
-void swap(int *a,int *b){
+void swap(int *a,int *b){ //aquí adentro hay 3 operac
     int temp=*a;
     *a=*b;
     *b=temp;
@@ -14,31 +14,30 @@ void bubbleSort(int arreglo[],int tama, int *operaciones){
 	for (i=n-1;i>0;i--){
 		(*operaciones)++;
 		for (j=0;j<i;j++){
-			(*operaciones)++;
+			(*operaciones)++; //Sumar 1 operac
 			if (arreglo[j]>arreglo[j+1]){
 				swap(&arreglo[j],&arreglo[j+1]);
-                (*operaciones) ++;
+                (*operaciones) ++; //Sumar 3 operac por el swap
 				intercambio=1;
 			}
-		//printArray(arreglo,tama);
 		}
 		if (intercambio==0){
-			(*operaciones)++;
 				break;
 			}
 	}
 
 }
 int main(){
+
     printf("---BubbleSort---\n");
     printf("\n");
+    srand(time(NULL));
     int numPruebas=5;
 
     for (int i=0;i<numPruebas;i++){
-    
+
     printf("--- Prueba numero: %d\n", i+1);
-    
-	srand(time(NULL));
+	
     int arr1[50], arr2[100], arr3[500], arr4[800], arr5[1000], arr6[2000], arr7[5000], arr8[10000];
     int i,operaciones;
     for (i=0;i<50;i++){

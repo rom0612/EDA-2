@@ -31,12 +31,13 @@ void InsertionSort(int lista[], int n, int *operaciones) {
 int main() {
     printf("---InsertionSort---\n");
     printf("\n");
+    srand(time(NULL));
     int numPruebas=5;
 
     for (int i=0;i<numPruebas;i++){
-    
+
     printf("--- Prueba numero: %d\n", i+1);
-    srand(time(NULL));
+
     int arr1[50], arr2[100], arr3[500], arr4[800], arr5[1000], arr6[2000], arr7[5000], arr8[10000];
     int i, operaciones;
     
@@ -111,6 +112,7 @@ int main() {
     operaciones = 0;
     InsertionSort(arr8, n8, &operaciones);
     printf("Total de operaciones con arreglo de 10000: %d\n", operaciones);
-    }
+
+}
     return 0;
 }

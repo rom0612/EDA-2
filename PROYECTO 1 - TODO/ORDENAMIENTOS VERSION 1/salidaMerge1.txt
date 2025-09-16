@@ -1,0 +1,47 @@
+---MergeSort---
+
+--- Prueba numero: 1
+Total de operaciones con arreglo de 50: 2392
+Total de operaciones con arreglo de 100: 5634
+Total de operaciones con arreglo de 500: 37148
+Total de operaciones con arreglo de 800: 64074
+Total de operaciones con arreglo de 1000: 82322
+Total de operaciones con arreglo de 2000: 180574
+Total de operaciones con arreglo de 5000: 506366
+Total de operaciones con arreglo de 10000: 1092558
+--- Prueba numero: 2
+Total de operaciones con arreglo de 50: 2404
+Total de operaciones con arreglo de 100: 5624
+Total de operaciones con arreglo de 500: 37130
+Total de operaciones con arreglo de 800: 64074
+Total de operaciones con arreglo de 1000: 82234
+Total de operaciones con arreglo de 2000: 180574
+Total de operaciones con arreglo de 5000: 506266
+Total de operaciones con arreglo de 10000: 1092540
+--- Prueba numero: 3
+Total de operaciones con arreglo de 50: 2410
+Total de operaciones con arreglo de 100: 5622
+Total de operaciones con arreglo de 500: 37138
+Total de operaciones con arreglo de 800: 64088
+Total de operaciones con arreglo de 1000: 82306
+Total de operaciones con arreglo de 2000: 180548
+Total de operaciones con arreglo de 5000: 506356
+Total de operaciones con arreglo de 10000: 1092460
+--- Prueba numero: 4
+Total de operaciones con arreglo de 50: 2402
+Total de operaciones con arreglo de 100: 5610
+Total de operaciones con arreglo de 500: 37142
+Total de operaciones con arreglo de 800: 64142
+Total de operaciones con arreglo de 1000: 82254
+Total de operaciones con arreglo de 2000: 180466
+Total de operaciones con arreglo de 5000: 506260
+Total de operaciones con arreglo de 10000: 1092608
+--- Prueba numero: 5
+Total de operaciones con arreglo de 50: 2410
+Total de operaciones con arreglo de 100: 5616
+Total de operaciones con arreglo de 500: 37142
+Total de operaciones con arreglo de 800: 64096
+Total de operaciones con arreglo de 1000: 82278
+Total de operaciones con arreglo de 2000: 180478
+Total de operaciones con arreglo de 5000: 506334
+Total de operaciones con arreglo de 10000: 1092398

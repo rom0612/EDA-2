@@ -1,0 +1,97 @@
+Total de operaciones con arreglo de 50: 1874
+Total de operaciones con arreglo de 100: 7579
+Total de operaciones con arreglo de 500: 188527
+Total de operaciones con arreglo de 800: 477237
+Total de operaciones con arreglo de 1000: 752573
+Total de operaciones con arreglo de 2000: 2981168
+Total de operaciones con arreglo de 5000: 18716092
+Total de operaciones con arreglo de 10000: 75450265
+---BubbleSort---
+
+Total de operaciones con arreglo de 50: 1859
+Total de operaciones con arreglo de 100: 7525
+Total de operaciones con arreglo de 500: 189727
+Total de operaciones con arreglo de 800: 480591
+Total de operaciones con arreglo de 1000: 754472
+Total de operaciones con arreglo de 2000: 2964843
+Total de operaciones con arreglo de 5000: 18754509
+Total de operaciones con arreglo de 10000: 74796011
+Total de operaciones con arreglo de 50: 1900
+Total de operaciones con arreglo de 100: 7668
+Total de operaciones con arreglo de 500: 186807
+Total de operaciones con arreglo de 800: 482440
+Total de operaciones con arreglo de 1000: 750406
+Total de operaciones con arreglo de 2000: 3005142
+Total de operaciones con arreglo de 5000: 18725570
+Total de operaciones con arreglo de 10000: 75216992
+Total de operaciones con arreglo de 50: 1900
+Total de operaciones con arreglo de 100: 7668
+Total de operaciones con arreglo de 500: 186807
+Total de operaciones con arreglo de 800: 482440
+Total de operaciones con arreglo de 1000: 750406
+Total de operaciones con arreglo de 2000: 3005142
+Total de operaciones con arreglo de 5000: 18725570
+Total de operaciones con arreglo de 10000: 75216992
+Total de operaciones con arreglo de 50: 1900
+Total de operaciones con arreglo de 100: 7668
+Total de operaciones con arreglo de 500: 186807
+Total de operaciones con arreglo de 800: 482440
+Total de operaciones con arreglo de 1000: 750406
+Total de operaciones con arreglo de 2000: 3005142
+Total de operaciones con arreglo de 5000: 18725570
+Total de operaciones con arreglo de 10000: 75216992
+Total de operaciones con arreglo de 50: 1938
+Total de operaciones con arreglo de 100: 7347
+Total de operaciones con arreglo de 500: 187600
+Total de operaciones con arreglo de 800: 486475
+Total de operaciones con arreglo de 1000: 756386
+Total de operaciones con arreglo de 2000: 3002911
+Total de operaciones con arreglo de 5000: 18695186
+Total de operaciones con arreglo de 10000: 75053670
+---BubbleSort---
+
+--- Prueba numero: 1
+Total de operaciones con arreglo de 50: 1930
+Total de operaciones con arreglo de 100: 7170
+Total de operaciones con arreglo de 500: 187183
+Total de operaciones con arreglo de 800: 476564
+Total de operaciones con arreglo de 1000: 761310
+Total de operaciones con arreglo de 2000: 3016144
+Total de operaciones con arreglo de 5000: 18849647
+Total de operaciones con arreglo de 10000: 75111527
+--- Prueba numero: 2
+Total de operaciones con arreglo de 50: 1930
+Total de operaciones con arreglo de 100: 7170
+Total de operaciones con arreglo de 500: 187183
+Total de operaciones con arreglo de 800: 476564
+Total de operaciones con arreglo de 1000: 761310
+Total de operaciones con arreglo de 2000: 3016144
+Total de operaciones con arreglo de 5000: 18849647
+Total de operaciones con arreglo de 10000: 75111527
+--- Prueba numero: 3
+Total de operaciones con arreglo de 50: 1930
+Total de operaciones con arreglo de 100: 7170
+Total de operaciones con arreglo de 500: 187183
+Total de operaciones con arreglo de 800: 476564
+Total de operaciones con arreglo de 1000: 761310
+Total de operaciones con arreglo de 2000: 3016144
+Total de operaciones con arreglo de 5000: 18849647
+Total de operaciones con arreglo de 10000: 75111527
+--- Prueba numero: 4
+Total de operaciones con arreglo de 50: 1899
+Total de operaciones con arreglo de 100: 7497
+Total de operaciones con arreglo de 500: 185303
+Total de operaciones con arreglo de 800: 478897
+Total de operaciones con arreglo de 1000: 760444
+Total de operaciones con arreglo de 2000: 2994970
+Total de operaciones con arreglo de 5000: 18743047
+Total de operaciones con arreglo de 10000: 74842348
+--- Prueba numero: 5
+Total de operaciones con arreglo de 50: 1899
+Total de operaciones con arreglo de 100: 7497
+Total de operaciones con arreglo de 500: 185303
+Total de operaciones con arreglo de 800: 478897
+Total de operaciones con arreglo de 1000: 760444
+Total de operaciones con arreglo de 2000: 2994970
+Total de operaciones con arreglo de 5000: 18743047
+Total de operaciones con arreglo de 10000: 74842348

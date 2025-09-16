@@ -5,38 +5,34 @@
 
 void InsertionSort(int lista[], int n, int *operaciones) {
     for (int i = 1; i < n; i++) {
-        (*operaciones)++; // Comparación del for
+        (*operaciones)++;
         int index = lista[i];
-        (*operaciones)++; // Asignación
         int j = i - 1;
-        (*operaciones)++; // Asignación
         
         while (j >= 0) {
-            (*operaciones)++; // Comparación del while
-            (*operaciones)++; // Comparación interna
+            (*operaciones)++;
             if (lista[j] > index) {
+                (*operaciones)++; 
                 lista[j + 1] = lista[j];
-                (*operaciones)++; // Asignación
                 j = j - 1;
-                (*operaciones)++; // Asignación
             } else {
                 break;
             }
         }
         lista[j + 1] = index;
-        (*operaciones)++; // Asignación
     }
 }
 
 int main() {
     printf("---InsertionSort---\n");
     printf("\n");
+    srand(time(NULL));
     int numPruebas=5;
 
     for (int i=0;i<numPruebas;i++){
-    
+
     printf("--- Prueba numero: %d\n", i+1);
-    srand(time(NULL));
+
     int arr1[50], arr2[100], arr3[500], arr4[800], arr5[1000], arr6[2000], arr7[5000], arr8[10000];
     int i, operaciones;
     
@@ -111,6 +107,7 @@ int main() {
     operaciones = 0;
     InsertionSort(arr8, n8, &operaciones);
     printf("Total de operaciones con arreglo de 10000: %d\n", operaciones);
-    }
+
+}
     return 0;
 }

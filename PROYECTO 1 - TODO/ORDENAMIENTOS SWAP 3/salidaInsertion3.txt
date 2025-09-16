@@ -1,0 +1,47 @@
+---InsertionSort---
+
+--- Prueba numero: 1
+Total de operaciones con arreglo de 50: 1224
+Total de operaciones con arreglo de 100: 5239
+Total de operaciones con arreglo de 500: 128738
+Total de operaciones con arreglo de 800: 322763
+Total de operaciones con arreglo de 1000: 517177
+Total de operaciones con arreglo de 2000: 2024168
+Total de operaciones con arreglo de 5000: 12374033
+Total de operaciones con arreglo de 10000: 49995834
+--- Prueba numero: 2
+Total de operaciones con arreglo de 50: 1141
+Total de operaciones con arreglo de 100: 5046
+Total de operaciones con arreglo de 500: 133370
+Total de operaciones con arreglo de 800: 312856
+Total de operaciones con arreglo de 1000: 517730
+Total de operaciones con arreglo de 2000: 1999265
+Total de operaciones con arreglo de 5000: 12638334
+Total de operaciones con arreglo de 10000: 50149287
+--- Prueba numero: 3
+Total de operaciones con arreglo de 50: 1242
+Total de operaciones con arreglo de 100: 5188
+Total de operaciones con arreglo de 500: 120487
+Total de operaciones con arreglo de 800: 324358
+Total de operaciones con arreglo de 1000: 508475
+Total de operaciones con arreglo de 2000: 2048766
+Total de operaciones con arreglo de 5000: 12653735
+Total de operaciones con arreglo de 10000: 50127501
+--- Prueba numero: 4
+Total de operaciones con arreglo de 50: 1366
+Total de operaciones con arreglo de 100: 5026
+Total de operaciones con arreglo de 500: 129434
+Total de operaciones con arreglo de 800: 312257
+Total de operaciones con arreglo de 1000: 494897
+Total de operaciones con arreglo de 2000: 2021738
+Total de operaciones con arreglo de 5000: 12547166
+Total de operaciones con arreglo de 10000: 49850298
+--- Prueba numero: 5
+Total de operaciones con arreglo de 50: 1381
+Total de operaciones con arreglo de 100: 5444
+Total de operaciones con arreglo de 500: 127655
+Total de operaciones con arreglo de 800: 312173
+Total de operaciones con arreglo de 1000: 492272
+Total de operaciones con arreglo de 2000: 2049832
+Total de operaciones con arreglo de 5000: 12515735
+Total de operaciones con arreglo de 10000: 50329517

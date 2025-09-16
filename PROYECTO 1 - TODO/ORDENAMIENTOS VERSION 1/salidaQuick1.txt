@@ -1,0 +1,46 @@
+---QuickSort---
+--- Prueba numero: 1
+Total de operaciones con arreglo de 50: 521
+Total de operaciones con arreglo de 100: 1006
+Total de operaciones con arreglo de 500: 8415
+Total de operaciones con arreglo de 800: 14328
+Total de operaciones con arreglo de 1000: 17268
+Total de operaciones con arreglo de 2000: 42249
+Total de operaciones con arreglo de 5000: 114073
+Total de operaciones con arreglo de 10000: 240239
+--- Prueba numero: 2
+Total de operaciones con arreglo de 50: 471
+Total de operaciones con arreglo de 100: 1188
+Total de operaciones con arreglo de 500: 7260
+Total de operaciones con arreglo de 800: 14581
+Total de operaciones con arreglo de 1000: 19123
+Total de operaciones con arreglo de 2000: 41275
+Total de operaciones con arreglo de 5000: 106038
+Total de operaciones con arreglo de 10000: 260380
+--- Prueba numero: 3
+Total de operaciones con arreglo de 50: 447
+Total de operaciones con arreglo de 100: 1008
+Total de operaciones con arreglo de 500: 9262
+Total de operaciones con arreglo de 800: 14854
+Total de operaciones con arreglo de 1000: 16820
+Total de operaciones con arreglo de 2000: 38183
+Total de operaciones con arreglo de 5000: 106619
+Total de operaciones con arreglo de 10000: 242728
+--- Prueba numero: 4
+Total de operaciones con arreglo de 50: 503
+Total de operaciones con arreglo de 100: 1201
+Total de operaciones con arreglo de 500: 8742
+Total de operaciones con arreglo de 800: 13664
+Total de operaciones con arreglo de 1000: 16768
+Total de operaciones con arreglo de 2000: 43904
+Total de operaciones con arreglo de 5000: 112538
+Total de operaciones con arreglo de 10000: 249303
+--- Prueba numero: 5
+Total de operaciones con arreglo de 50: 414
+Total de operaciones con arreglo de 100: 1211
+Total de operaciones con arreglo de 500: 7455
+Total de operaciones con arreglo de 800: 15785
+Total de operaciones con arreglo de 1000: 17836
+Total de operaciones con arreglo de 2000: 40983
+Total de operaciones con arreglo de 5000: 104806
+Total de operaciones con arreglo de 10000: 257114
