@@ -1,0 +1,8 @@
+Total de operaciones con arreglo de 50: 2553
+Total de operaciones con arreglo de 100: 5905
+Total de operaciones con arreglo de 500: 38681
+Total de operaciones con arreglo de 800: 66463
+Total de operaciones con arreglo de 1000: 85259
+Total de operaciones con arreglo de 2000: 186529
+Total de operaciones con arreglo de 5000: 521371
+Total de operaciones con arreglo de 10000: 1122493
