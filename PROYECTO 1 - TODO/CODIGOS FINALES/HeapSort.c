@@ -3,35 +3,73 @@
 #include <time.h>
 #include "utilerias.h"
 
-void selectionSort(int arreglo[], int n, int *operaciones) {
-    int indiceMenor, i, j;
-    for(i = 0; i < n - 1; i++) {
-        (*operaciones)++;
-        indiceMenor = i;
-        for(j = i + 1; j < n; j++) {
+void Heapify(int* A, int i, int size, int* heapSize, int* operaciones) {
+    int l = 2 * i + 1;
+    int r = 2 * i + 2;
+    int largest;
+
+    if(l <= *heapSize) {
+        (*operaciones)++; 
+        if(A[l] > A[i]) {
+            largest = l;
             (*operaciones)++; 
-            if(arreglo[j] < arreglo[indiceMenor]) {
-                indiceMenor = j;
-                (*operaciones)++; 
-            }
+        } else {
+            largest = i;
+            (*operaciones)++;
         }
-        if(i != indiceMenor) {
-            swap(&arreglo[i], &arreglo[indiceMenor]);
-            (*operaciones) +=3;// 3 asignaciones x swap
+    } else {
+        largest = i;
+        (*operaciones)++;
+    }
+
+    if(r <= *heapSize) {
+        (*operaciones)++; 
+        if(A[r] > A[largest]) {
+            largest = r;
+            (*operaciones)++;
         }
+    }
+
+    if(largest != i) {
+        swap(&A[i], &A[largest]);
+        (*operaciones) +=3; //Sumar 3 operac
+        Heapify(A, largest, size, heapSize, operaciones);
+    }
+}
+
+void BuildHeap(int* A, int size, int* heapSize, int* operaciones) {
+    *heapSize = size - 1;
+    (*operaciones)++; 
+    
+    for(int i = (size - 1) / 2; i >= 0; i--) {
+        (*operaciones)++; 
+        Heapify(A, i, size, heapSize, operaciones);
+    }
+}
+
+void HeapSort(int* A, int size, int* operaciones) {
+    int heapSize;
+    BuildHeap(A, size, &heapSize, operaciones);
+    
+    for(int i = size - 1; i > 0; i--) {
+        (*operaciones)++; 
+        swap(&A[0], &A[i]);
+        (*operaciones) +=3; //Sumar 3 operac por el swp
+        heapSize--;
+        (*operaciones)++;
+        Heapify(A, 0, size, &heapSize, operaciones);
     }
 }
 
 int main() {
-    printf("---SelectionSort---\n");
+    printf("---HeapSort---\n");
     printf("\n");
-        srand(time(NULL));
+    srand(time(NULL));
     int numPruebas=5;
 
     for (int i=0;i<numPruebas;i++){
 
     printf("--- Prueba numero: %d\n", i+1);
-
     int arr1[50], arr2[100], arr3[500], arr4[800], arr5[1000], arr6[2000], arr7[5000], arr8[10000];
     int i, operaciones;
     
@@ -60,35 +98,35 @@ int main() {
     int t8 = sizeof(arr8) / sizeof(arr8[0]);
     
     operaciones = 0;
-    selectionSort(arr1, t1, &operaciones);
+    HeapSort(arr1, t1, &operaciones);
     printf("Total de operaciones con arreglo de 50: %d\n", operaciones);
     
     operaciones = 0;
-    selectionSort(arr2, t2, &operaciones);
+    HeapSort(arr2, t2, &operaciones);
     printf("Total de operaciones con arreglo de 100: %d\n", operaciones);
     
     operaciones = 0;
-    selectionSort(arr3, t3, &operaciones);
-    printf("Total de operaciones con arreglo of 500: %d\n", operaciones);
+    HeapSort(arr3, t3, &operaciones);
+    printf("Total de operaciones con arreglo de 500: %d\n", operaciones);
     
     operaciones = 0;
-    selectionSort(arr4, t4, &operaciones);
+    HeapSort(arr4, t4, &operaciones);
     printf("Total de operaciones con arreglo de 800: %d\n", operaciones);
     
     operaciones = 0;
-    selectionSort(arr5, t5, &operaciones);
+    HeapSort(arr5, t5, &operaciones);
     printf("Total de operaciones con arreglo de 1000: %d\n", operaciones);
     
     operaciones = 0;
-    selectionSort(arr6, t6, &operaciones);
+    HeapSort(arr6, t6, &operaciones);
     printf("Total de operaciones con arreglo de 2000: %d\n", operaciones);
     
     operaciones = 0;
-    selectionSort(arr7, t7, &operaciones);
+    HeapSort(arr7, t7, &operaciones);
     printf("Total de operaciones con arreglo de 5000: %d\n", operaciones);
     
     operaciones = 0;
-    selectionSort(arr8, t8, &operaciones);
+    HeapSort(arr8, t8, &operaciones);
     printf("Total de operaciones con arreglo de 10000: %d\n", operaciones);
 
 }

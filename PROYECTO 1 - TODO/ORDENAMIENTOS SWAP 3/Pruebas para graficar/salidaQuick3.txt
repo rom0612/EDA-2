@@ -1,0 +1,46 @@
+---QuickSort---
+--- Prueba numero: 1
+Total de operaciones con arreglo de 50: 808
+Total de operaciones con arreglo de 100: 2056
+Total de operaciones con arreglo de 500: 13017
+Total de operaciones con arreglo de 800: 25455
+Total de operaciones con arreglo de 1000: 31030
+Total de operaciones con arreglo de 2000: 65258
+Total de operaciones con arreglo de 5000: 241301
+Total de operaciones con arreglo de 10000: 584291
+--- Prueba numero: 2
+Total de operaciones con arreglo de 50: 865
+Total de operaciones con arreglo de 100: 1647
+Total de operaciones con arreglo de 500: 13598
+Total de operaciones con arreglo de 800: 21373
+Total de operaciones con arreglo de 1000: 32065
+Total de operaciones con arreglo de 2000: 72406
+Total de operaciones con arreglo de 5000: 220986
+Total de operaciones con arreglo de 10000: 538624
+--- Prueba numero: 3
+Total de operaciones con arreglo de 50: 746
+Total de operaciones con arreglo de 100: 1970
+Total de operaciones con arreglo de 500: 15783
+Total de operaciones con arreglo de 800: 20975
+Total de operaciones con arreglo de 1000: 31101
+Total de operaciones con arreglo de 2000: 70033
+Total de operaciones con arreglo de 5000: 223307
+Total de operaciones con arreglo de 10000: 605914
+--- Prueba numero: 4
+Total de operaciones con arreglo de 50: 730
+Total de operaciones con arreglo de 100: 2002
+Total de operaciones con arreglo de 500: 13155
+Total de operaciones con arreglo de 800: 25236
+Total de operaciones con arreglo de 1000: 30072
+Total de operaciones con arreglo de 2000: 65124
+Total de operaciones con arreglo de 5000: 214434
+Total de operaciones con arreglo de 10000: 549431
+--- Prueba numero: 5
+Total de operaciones con arreglo de 50: 855
+Total de operaciones con arreglo de 100: 1776
+Total de operaciones con arreglo de 500: 15108
+Total de operaciones con arreglo de 800: 22809
+Total de operaciones con arreglo de 1000: 30399
+Total de operaciones con arreglo de 2000: 71714
+Total de operaciones con arreglo de 5000: 231063
+Total de operaciones con arreglo de 10000: 544737

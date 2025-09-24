@@ -3,30 +3,73 @@
 #include <time.h>
 #include "utilerias.h"
 
-void InsertionSort(int lista[], int n, int *operaciones) {
-    for (int i = 1; i < n; i++) {
+void merge(int arreglo[], int left, int mid, int right, int* operaciones) {
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    //int* izquierda = (int*)malloc(n1 * sizeof(int));
+    //int* derecha = (int*)malloc(n2 * sizeof(int));
+    int izquierda[n1];
+    int derecha[n2];
+
+    for (int i = 0; i < n1; ++i) {
+        (*operaciones)++; 
+        izquierda[i] = arreglo[left + i];
+    }
+    
+    for (int j = 0; j < n2; ++j) {
+        (*operaciones)++; 
+        derecha[j] = arreglo[mid + 1 + j];
+    }
+
+    int i = 0, j = 0, k = left;
+
+    while (i < n1 && j < n2) {
         (*operaciones)++;
-        int index = lista[i];
-        int j = i - 1;
-        
-        while (j >= 0) {
+        if (izquierda[i] <= derecha[j]) {
+            arreglo[k] = izquierda[i];
             (*operaciones)++;
-            if (lista[j] > index) {
-                (*operaciones)++; 
-                lista[j + 1] = lista[j];
-                j = j - 1;
-            } else {
-                break;
-            }
+            i++;
+        } else {
+            arreglo[k] = derecha[j];
+            (*operaciones)++;
+            j++;
         }
-        lista[j + 1] = index;
+        k++;
+    }
+
+    while (i < n1) {
+        (*operaciones)++; 
+        arreglo[k] = izquierda[i];
+        i++;
+        k++;
+    }
+    
+    while (j < n2) {
+        (*operaciones)++; 
+        arreglo[k] = derecha[j];
+        j++;
+        k++;
+    }
+    
+}
+
+void mergeSort(int arreglo[], int left, int right, int* operaciones) {
+    
+    if (left < right) {
+        (*operaciones)++;
+        int mid = (left + right) / 2;
+        mergeSort(arreglo, left, mid, operaciones);
+        mergeSort(arreglo, mid + 1, right, operaciones);
+        merge(arreglo, left, mid, right, operaciones);
     }
 }
 
 int main() {
-    printf("---InsertionSort---\n");
+    printf("---MergeSort---\n");
     printf("\n");
     srand(time(NULL));
+    
     int numPruebas=5;
 
     for (int i=0;i<numPruebas;i++){
@@ -34,7 +77,7 @@ int main() {
     printf("--- Prueba numero: %d\n", i+1);
 
     int arr1[50], arr2[100], arr3[500], arr4[800], arr5[1000], arr6[2000], arr7[5000], arr8[10000];
-    int operaciones;
+    int i, operaciones;
     
     generarArregloAleatorio(arr1, 50);
     int t1 = sizeof(arr1) / sizeof(arr1[0]);
@@ -61,37 +104,38 @@ int main() {
     int t8 = sizeof(arr8) / sizeof(arr8[0]);
     
     operaciones = 0;
-    InsertionSort(arr1, t1, &operaciones);
+    mergeSort(arr1, 0, t1 - 1, &operaciones);
     printf("Total de operaciones con arreglo de 50: %d\n", operaciones);
     
     operaciones = 0;
-    InsertionSort(arr2, t2, &operaciones);
+    mergeSort(arr2, 0, t2 - 1, &operaciones);
     printf("Total de operaciones con arreglo de 100: %d\n", operaciones);
     
     operaciones = 0;
-    InsertionSort(arr3, t3, &operaciones);
+    mergeSort(arr3, 0, t3 - 1, &operaciones);
     printf("Total de operaciones con arreglo de 500: %d\n", operaciones);
     
     operaciones = 0;
-    InsertionSort(arr4, t4, &operaciones);
+    mergeSort(arr4, 0, t4 - 1, &operaciones);
     printf("Total de operaciones con arreglo de 800: %d\n", operaciones);
     
     operaciones = 0;
-    InsertionSort(arr5, t5, &operaciones);
+    mergeSort(arr5, 0, t5 - 1, &operaciones);
     printf("Total de operaciones con arreglo de 1000: %d\n", operaciones);
     
     operaciones = 0;
-    InsertionSort(arr6, t6, &operaciones);
+    mergeSort(arr6, 0, t6 - 1, &operaciones);
     printf("Total de operaciones con arreglo de 2000: %d\n", operaciones);
     
     operaciones = 0;
-    InsertionSort(arr7, t7, &operaciones);
+    mergeSort(arr7, 0, t7 - 1, &operaciones);
     printf("Total de operaciones con arreglo de 5000: %d\n", operaciones);
     
     operaciones = 0;
-    InsertionSort(arr8, t8, &operaciones);
+    mergeSort(arr8, 0, t8 - 1, &operaciones);
     printf("Total de operaciones con arreglo de 10000: %d\n", operaciones);
 
 }
+
     return 0;
 }
