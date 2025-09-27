@@ -1,48 +1,108 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 public class Principal {
     public static void main (String [] args){
-        ArrayList<Integer>listEnteros=new ArrayList<Integer>();
+        ListaComputadoras compus = new ListaComputadoras();
+        ListaEnteros nums = new ListaEnteros();
+        //inicializar listas
+        compus.inicializarlista();
+        nums.inicializarlista();
+        //obtener listas
+        ArrayList <Computadora> listCompus = new ArrayList<>(compus.obtenerLista());
+        ArrayList <Integer> listNums = new ArrayList<>(nums.obtenerLista());
 
-        listEnteros.add(1);
-        listEnteros.add(3);
-        listEnteros.add(5);
-        listEnteros.add(7);
-        listEnteros.add(7);
-        listEnteros.add(7);
-        listEnteros.add(9);
-        listEnteros.add(10);
-        listEnteros.add(11);
+        System.out.println("Bienvenido al menú de búsqueda");
+        int opcion=0;
+        Scanner sc =new Scanner(System.in);
 
-        int numBuscado=7;
-        int fin=listEnteros.size()-1;
-        int total=BusquedaBinaria.contarAp(listEnteros, 0, fin, numBuscado);
+        
+        do {
 
-        System.out.println("la lista tiene " + total + " veces el numero "+ numBuscado);
+            System.out.println("-----Menú, selecciona una opcion-----");
+            System.out.println("1. Búsqueda Lineal de Enteros");
+            System.out.println("2. Búsqueda Binaria de Enteros");
+            System.out.println("3. Búsqueda de computadoras");
+            System.out.println("4. Salir");
+            opcion=sc.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    System.out.println("Qué numero quieres buscar?");
+                    int numBuscado=sc.nextInt();
+                        System.out.println("-De qué forma quieres buscar el número?-");
+                        System.out.println("1. Búsqueda básica (está o no)");
+                        System.out.println("2. Buscar índice");
+                        System.out.println("3. Buscar apariciones");
+                        opcion=sc.nextInt();
+                        switch (opcion) {
+                            case 1:
+                                System.out.println(BusquedaLineal.seEncuentraInt(listNums,numBuscado));
+                                break;
+                            case 2:
+                                int indNum= BusquedaLineal.buscarInd(listNums,numBuscado);
+                                System.out.println("El número " + numBuscado + " se encuentra en la posciión " + indNum);
+                                break;
+                            case 3:
+                                System.out.println(BusquedaLineal.contarAp(listNums,numBuscado));
+                                break;
+                            default:
+                                System.out.println("opcion no válida");
+                                break;
+                        }
+                    break;
+                case 2:
+                    System.out.println("Qué numero quieres buscar?");
+                    int numBuscadoB=sc.nextInt();
+                        System.out.println("-De qué forma quieres buscar el número?-");
+                        System.out.println("1. Búsqueda básica (está o no)");
+                        System.out.println("2. Buscar apariciones");
+                        opcion=sc.nextInt();
+                        switch (opcion) {
+                            case 1:
+                                System.out.println(BusquedaBinaria.seEncuentra(listNums,numBuscadoB));
+                                break;
+                            case 2:
+                                System.out.println(BusquedaBinaria.contarAp(listNums, numBuscadoB));
+                                break;
+                            default:
+                                System.out.println("opcion no válida");
+                                break;
+                        }
+                    break;
+                case 3:
+                    System.out.println("-De qué forma quieres buscar el la computadora?-");
+                        System.out.println("1. Por marca");
+                        System.out.println("2. Por memoria");
+                        opcion=sc.nextInt();
+                        sc.nextLine();
+                        switch (opcion) {
+                            case 1:
+                                System.out.println("Ingrese la marca que desea buscar");
+                                String marca = sc.nextLine();
+                                System.out.println(BusquedaLineal.contarAp(listCompus, marca));
+                                break;
+                            case 2:
+                                System.out.println("Ingrese la memoria que desea buscar en GB");
+                                int memoriaB = sc.nextInt();
+                                System.out.println(BusquedaLineal.contarApMemoria(listCompus, memoriaB));
+                                break;
+                            default:
+                                System.out.println("opcion no válida");
+                                break;
+                        }
+                    break;
+                case 4:
+                    System.out.println("Saliendo...");
+                    break;
+                default:
+                        System.out.println("Opcion no valida");
+                    break;
+            }
 
 
-        //============COMPUS
-        ArrayList<Computadora>listaCompus=new ArrayList<>();
-        Computadora c1 = new Computadora("HP", "Aurora R15", 32,"nueva", "Windows 11");
-        Computadora c2 = new Computadora("Lenovo", "ThinkPad T480", 16,"no sirve", "Ubuntu");
-        Computadora c3 = new Computadora("Apple", "MacBook Air M2", 2,"nueva", "macOS");
-        Computadora c4 = new Computadora("HP", "Compaq dx2400", 2,"muy vieja", "Windows 11");
-        listaCompus.add(c1);
-        listaCompus.add(c2);
-        listaCompus.add(c3);
-        listaCompus.add(c4);
-        String marcaBusq1="HP";
-        String marcaBusq2="hp";
-        String marcaBusq3="apple";
-        String marcaBusq4="acer";
-        int bl1= BusquedaLineal.contarApCompu(listaCompus, marcaBusq1);
-        int bl2= BusquedaLineal.contarApCompu(listaCompus, marcaBusq2);
-        int bl3= BusquedaLineal.contarApCompu(listaCompus, marcaBusq3);
-        int bl4= BusquedaLineal.contarApCompu(listaCompus, marcaBusq4);
+        } while (opcion!=4);
 
-        System.out.println("la lista contiene " + bl1 + " computadoras de la marca " + marcaBusq1);
-        System.out.println("la lista contiene " + bl2 + " computadoras de la marca " + marcaBusq2);
-        System.out.println("la lista contiene " + bl3 + " computadoras de la marca " + marcaBusq3);
-        System.out.println("la lista contiene " + bl4 + " computadoras de la marca " + marcaBusq4);
 
-    }
-}
+        sc.close();
+    }//cierre d main
+}//cierre d clase

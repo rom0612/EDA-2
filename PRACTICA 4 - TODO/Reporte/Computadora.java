@@ -2,12 +2,12 @@ public class Computadora {
     //atributos
     private String marca;
     private String modelo;
-    private float memoria;
+    private int memoria;
     private String estado; //nueva, usada, no sirve, muy vieja
     private String sistemaOperativo;
 
     //constructor
-    public Computadora(String marca, String modelo, float memoria, String estado,String sistemaOperativo){
+    public Computadora(String marca, String modelo, int memoria, String estado,String sistemaOperativo){
         setMarca(marca);
         setModelo(modelo);
         setMemoria(memoria);
@@ -36,7 +36,7 @@ public class Computadora {
         return memoria;
     }
 
-    public void setMemoria(float memoria){
+    public void setMemoria(int memoria){
         this.memoria=memoria;
     }
 
