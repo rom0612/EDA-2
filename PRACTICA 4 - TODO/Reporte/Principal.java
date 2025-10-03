@@ -30,7 +30,7 @@ public class Principal {
                     System.out.println("Qué numero quieres buscar?");
                     int numBuscado=sc.nextInt();
                         System.out.println("-De qué forma quieres buscar el número?-");
-                        System.out.println("1. Búsqueda básica (está o no)");
+                        System.out.println("1. Búsqueda Lbásica (está o no)");
                         System.out.println("2. Buscar índice");
                         System.out.println("3. Buscar apariciones");
                         opcion=sc.nextInt();
