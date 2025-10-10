@@ -4,43 +4,48 @@ import java.util.Scanner;
 public class HashCuadrado{
 
     public static void main(String[] args) {
-        // Usamos un HashMap donde la clave es la posición (0-39) y el valor es el número guardado.
-        HashMap<Integer, Integer> tablaHash = new HashMap<>();
+        // la clave es la posición y el valor el número guardado.
+        HashMap<Integer, Integer> tablaHash = new HashMap<>(40);
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("--- Ejercicio 1 (versión HashMap): Hash Cuadrado ---");
-        System.out.println("Por favor, ingrese 15 valores (números de 4 dígitos).");
+        System.out.println("Tamaño del contenedor: 40");
+        System.out.println("Ingresa 15 valores: ");
 
-        // El programa solicitará al usuario 15 valores [cite: 2]
         for (int i = 0; i < 15; i++) {
-            System.out.print("Ingrese el valor #" + (i + 1) + ": ");
+            System.out.print("Ingresa la clave " + (i + 1) + ": ");
             int clave = scanner.nextInt();
+            long cuad = (long) clave * clave;
 
-            // Se implementará la función hash cuadrado en conjunto con la operación de módulo [cite: 1]
-            long cuadrado = (long) clave * clave;
-            // Se complementará con la función hash módulo 40 [cite: 2]
-            int posicion = (int) (cuadrado % 40);
+            // convertir a String para encontrar los de enmedio
+            String cuadStr = String.valueOf(cuad);
+            int tam = cuadStr.length();
+            int medio = tam / 2;
 
-            // El caso de haber colisiones se solucionarán por prueba lineal [cite: 4]
-            System.out.println("Clave: " + clave + ", Cuadrado: " + cuadrado + ", Posición inicial: " + posicion);
-            // Usamos .containsKey() para detectar colisiones
-            while (tablaHash.containsKey(posicion)) {
-                System.out.println("  -> Colisión en la posición " + posicion + ". Buscando siguiente espacio.");
+            String cent = cuadStr.substring(medio - 1, medio + 1); //tomo dos digitos con substring
+            // parsear a entero
+            int numCentral = Integer.parseInt(cent);
+            //mod40
+            int posicion = numCentral % 40;
+            //datos calculados como en la tablita del ejemplo
+            System.out.println("Clave: " + clave + ", cuadrado: " + cuad + ", centrales: " + numCentral + ", Posicion: " + posicion);
+            
+            //prueba lineal
+            while (tablaHash.containsKey(posicion)) { //mientas la posicion ya exista, va a recorrer para buscar otra
+                System.out.println("** Colisión en la posición " + posicion );
                 posicion = (posicion + 1) % 40;
             }
 
-            // Almacenar el elemento usando .put()
+            // guardar la clave
             tablaHash.put(posicion, clave);
-            System.out.println("  -> Elemento " + clave + " almacenado en la posición " + posicion + ".");
+            System.out.println("  -> clave " + clave + " guardada en la posicion " + posicion + ".");
         }
 
         scanner.close();
 
-        // Al finalizar de ingresar los elementos se deberá mostrar el contenedor [cite: 4]
-        System.out.println("\n--- Estado Final del Contenedor Hash ---");
+        // mostrar el contenedor 
+        System.out.println("\n---Contenedor---");
         for (int i = 0; i < 40; i++) {
-            // Usamos .getOrDefault() para obtener el valor o mostrar "(Vacío)" si no existe la clave.
-            System.out.println("Posición [" + i + "]: " + (tablaHash.get(i) == null ? "(Vacío)" : tablaHash.get(i)));
+            System.out.println("indice: " + i +  " -> valor:" + tablaHash.get(i));
         }
     }
 }
